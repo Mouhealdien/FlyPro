@@ -25,7 +25,7 @@ const Testimonials = () => {
             {
                 test.map((t)=>{
                     return(
-                        <TestimonialsCard image={t.image} text={t.text}/>
+                        <TestimonialsCard key={Math.random()} image={t.image} text={t.text}/>
                     )
 
                 })

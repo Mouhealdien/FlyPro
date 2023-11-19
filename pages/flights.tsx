@@ -164,7 +164,7 @@ const flights = () => {
             <h2 className="text-primeryLight mb-5 border-t-2 border-t-gray-200 w-[200px]">Airlines</h2>
             {carriers?.map((e) => {
               return (
-                <div className="flex items-center mt-2 me-4">
+                <div key={Math.random()} className="flex items-center mt-2 me-4">
                   <input
                     id="green-checkbox"
                     type="checkbox"
@@ -345,7 +345,7 @@ const flights = () => {
           <div className="w-full lg:w-[60%] flex flex-col gap-10">
             {filteredData?.map((e) => {
               return (
-                <div className=" bg-white flex flex-row items-center border-gray-200 border  shadow-lg py-7  ">
+                <div key={Math.random()} className=" bg-white flex flex-row items-center border-gray-200 border  shadow-lg py-7  ">
                   <div className=" flex flex-row items-center justify-around  w-full">
                     <div className="flex flex-col text-start">
                       <Image

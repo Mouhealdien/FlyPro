@@ -62,13 +62,13 @@ const Footer = () => {
                 {
                     footerData.map((e)=>{
                         return(
-                        <div className='mb-4'>
+                        <div key={Math.random()} className='mb-4'>
                             <h3 className='text-lg mb-3 '>{e.title}</h3>
                             <ul>
                                 {
                                     e?.children?.map((c)=>{
                                         return(
-                                            <Link href={c.link}>
+                                            <Link key={Math.random()} href={c.link}>
                                             <li className='text-sm mb-3'>{c.name}</li>
                                             </Link>
                                         )

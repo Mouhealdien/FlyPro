@@ -13,7 +13,7 @@ const Companies = () => {
         <div className='flex flex-col lg:flex-row items-center justify-around mt-5 '>
             {Companies.map(()=>{
                 return(
-                    <Image src={company} alt="company" width={150} height={150}/>
+                    <Image key={Math.random()} src={company} alt="company" width={150} height={150}/>
                 )
             })}
         </div>

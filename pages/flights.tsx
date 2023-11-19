@@ -10,7 +10,7 @@ import Container from "../components/Container";
 import { Range, getTrackBackground } from "react-range";
 import { changeTime, checkDurationRange, checkTimeRange, convertToHoursAndMinutes } from "../utils/common";
 import useFlightOffers from "../hooks/useFlightsSearch";
-const flights = () => {
+const Flights = () => {
 
   const { flightsOffer,queryData, carriers, maxPrice, minPrice, mindur, maxdur, filters, setFilters, values, setValues, durationValues, setdurationValues} = useFlightOffers();
 
@@ -414,4 +414,4 @@ const flights = () => {
   );
 };
 
-export default flights;
+export default Flights;

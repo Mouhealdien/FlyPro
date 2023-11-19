@@ -104,7 +104,7 @@ const handelPositionType=(e:string)=>{
       }
       console.log(submitData)
       router.push({
-    pathname: '/Flights',
+    pathname: '/flights',
     query: submitData})
 
     

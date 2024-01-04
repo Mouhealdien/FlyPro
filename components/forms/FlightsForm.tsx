@@ -77,7 +77,7 @@ const handelPositionType=(e:string)=>{
       const ddate=startDate.toLocaleDateString();
       const rdate=endDate?.toLocaleDateString();
       //const sdate=ddate.split("/")[2]+"-"+ddate.split("/")[0]+"-"+ddate.split("/")[1]
-      const sdate=startDate.toISOString().substring(0, 4)+"-"+startDate.toISOString().substring(5, 7)+"-"+(parseInt(startDate.toISOString().substring(8, 10),10)+1).toString()
+      const sdate=startDate.toISOString().substring(0, 4)+"-"+startDate.toISOString().substring(5, 7)+"-"+(parseInt(startDate.toISOString().substring(8, 10),10)<10?"0":"")+(parseInt(startDate.toISOString().substring(8, 10),10)+1).toString()
       let edate=undefined
       if(endDate){
         //edate=rdate.split("/")[2]+"-"+rdate.split("/")[0]+"-"+rdate.split("/")[1]

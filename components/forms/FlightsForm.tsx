@@ -76,11 +76,12 @@ const handelPositionType=(e:string)=>{
     const onSubmit: SubmitHandler<Inputs> = (data) =>{ 
       const ddate=startDate.toLocaleDateString();
       const rdate=endDate?.toLocaleDateString();
-      const sdate=ddate.split("/")[2]+"-"+ddate.split("/")[0]+"-"+ddate.split("/")[1]
+      //const sdate=ddate.split("/")[2]+"-"+ddate.split("/")[0]+"-"+ddate.split("/")[1]
+      const sdate=startDate.toISOString().substring(0, 4)+"-"+startDate.toISOString().substring(5, 7)+"-"+(parseInt(startDate.toISOString().substring(8, 10),10)+1).toString()
       let edate=undefined
       if(endDate){
-        edate=rdate.split("/")[2]+"-"+rdate.split("/")[0]+"-"+rdate.split("/")[1]
-
+        //edate=rdate.split("/")[2]+"-"+rdate.split("/")[0]+"-"+rdate.split("/")[1]
+        edate=endDate.toISOString().substring(0, 4)+"-"+endDate.toISOString().substring(5, 7)+"-"+(parseInt(endDate.toISOString().substring(8, 10),10)<10?"0":"")+(parseInt(endDate.toISOString().substring(8, 10),10)+1).toString()
       }
       
       const submitData = { ...data, departureDate:sdate,originLocationCode:fromValue, destinationLocationCode:toValue  }
